@@ -11,7 +11,8 @@ public class Invoice {
     @GeneratedValue
     private Integer id;
 
-    @ExcelCellName("Name")
+    @ExcelCell(0)
+    // @ExcelCellName("Name")
     private String name;
 
     @ExcelCell(1)
@@ -20,6 +21,7 @@ public class Invoice {
     @ExcelCell(2)
     private String number;
 
-    @ExcelCellName("ReceivedDate")
+    @ExcelCell(3)
+    // @ExcelCellName("ReceivedDate")
     private String receivedDate;
 }
