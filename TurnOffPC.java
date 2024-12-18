@@ -70,10 +70,10 @@ public class TurnOffPC {
     }
 
     private static void setSchedule(Scanner scanner) {
-        System.out.print("Enter date time (dd/MM/yyyy hh:mm:ss aa): ");
+        System.out.print("Enter date time (dd/MM/yyyy hh:mm:ss): ");
         String dString = scanner.nextLine().trim();
         try {
-            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm:ss a");
+            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
             LocalDateTime localDateTime = LocalDateTime.parse(dString, dateTimeFormatter);
             LocalDateTime currentDateTime = LocalDateTime.now();
             if (currentDateTime.isBefore(localDateTime)) {
